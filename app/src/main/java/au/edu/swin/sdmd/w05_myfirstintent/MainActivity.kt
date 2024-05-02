@@ -1,9 +1,9 @@
 package au.edu.swin.sdmd.w05_myfirstintent
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
 
 /**
  * Your task: create an intent that opens the DetailActivity when the image in MainActivity
@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         val image = findViewById<ImageView>(R.id.mainImage)
         image.setOnClickListener {
-            Toast.makeText(this, "Set up the intent here and remove the toast",
-                Toast.LENGTH_SHORT).show()
-            // TODO()
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
         }
+
     }
 }

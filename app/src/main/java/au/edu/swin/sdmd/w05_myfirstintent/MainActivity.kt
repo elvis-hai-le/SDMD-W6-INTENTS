@@ -28,15 +28,16 @@ class MainActivity : AppCompatActivity() {
         val showP1 = findViewById<TextView>(R.id.productOne)
         val showP2 = findViewById<TextView>(R.id.productTwo)
 
-        val result = product1 * product2
 
         showP1.text = product1.toString()
         showP2.text = product2.toString()
 
+        val result = Result(product1 * product2)
+
         val multiply = findViewById<Button>(R.id.multiplyBtn)
         multiply.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra("result", result.toString())
+            intent.putExtra("result", result)
             startActivity(intent)
         }
 

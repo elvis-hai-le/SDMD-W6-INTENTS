@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">W05-MyFirstIntent</string>
+    <string name="productOne">product1</string>
+    <string name="productTwo">product2</string>
+    <string name="productResult">result</string>
 </resources>
